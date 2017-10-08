@@ -3,7 +3,7 @@ FROM tomcat:8.0.38
 # Place the code version inside the webapps directory
 ARG PACKAGE_VERSION
 RUN echo "${PACKAGE_VERSION}" 
-ADD target/*.jar /usr/local/tomcat/webapps/ 
+ADD target/*.war /usr/local/tomcat/webapps/ 
 
 CMD ["catalina.sh", "run"]
 
